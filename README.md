@@ -37,10 +37,24 @@ cloud-operating-model/
 
 ## Usage
 
-Install or place the `cloud-operating-model/` folder where your Claude skills are discovered, then
-ask in natural language — e.g. *"help me pick the right cloud operating model and a roadmap to get
-there"* or *"compare a centralized cloud team vs a federated CCoE."* The skill routes to the right
-depth (a quick description vs. a full assessment) based on the request.
+### Claude (Agent Skills)
+
+Place the `cloud-operating-model/` folder where your Claude skills are discovered, then ask in
+natural language — e.g. *"help me pick the right cloud operating model and a roadmap to get there"*
+or *"compare a centralized cloud team vs a federated CCoE."* The skill auto-triggers from its
+description and routes to the right depth (a quick description vs. a full assessment).
+
+### GitHub Copilot (prompt file)
+
+The same workflow is available to Copilot as a prompt file at
+[`.github/prompts/cloud-operating-model.prompt.md`](.github/prompts/cloud-operating-model.prompt.md).
+In VS Code, Visual Studio, or a JetBrains IDE with Copilot Chat, invoke it on demand with
+`/cloud-operating-model`. It reuses the same `cloud-operating-model/references/*` and `assets/*`
+files, so the two editions stay in sync from one source of truth.
+
+## License
+
+[MIT](LICENSE) © 2026 Chris Horne
 
 ## Grounding
 
