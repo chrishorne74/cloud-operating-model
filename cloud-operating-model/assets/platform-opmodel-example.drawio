@@ -1,0 +1,214 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.6.0">
+  <diagram name="Page-1" id="GDIRahgUck6eMb1-qWf-">
+    <mxGraphModel dx="1389" dy="1110" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=18;fontStyle=1;align=center;verticalAlign=middle;fillColor=none;strokeColor=none;fontColor=#1a1a2e;" value="Cloud Operating Model — Platform-as-a-Product" vertex="1">
+          <mxGeometry height="40" width="1360" x="20" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="personas_container" parent="1" style="swimlane;startSize=30;fillColor=#1a1a2e;fontColor=#ffffff;fontSize=14;fontStyle=1;swimlaneLine=1;strokeColor=#1a1a2e;rounded=1;arcSize=8;" value="Customer Personas" vertex="1">
+          <mxGeometry height="720" width="320" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="personas_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;fillColor=#e8eaf6;strokeColor=#3949ab;fontSize=11;" value="&lt;b&gt;Enterprise App Team&lt;/b&gt;&lt;br&gt;&lt;i&gt;Stateful IaaS consumers&lt;/i&gt;&lt;hr size=&#39;1&#39;&gt;• Lift-and-shift workloads&lt;br&gt;• Traditional DB / middleware&lt;br&gt;• Need patching, backup, DR&lt;br&gt;• Low cloud maturity&lt;br&gt;&lt;b&gt;Wants:&lt;/b&gt; Managed VM + storage" vertex="1">
+          <mxGeometry height="125" width="290" x="15" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" parent="personas_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;fillColor=#e8f5e9;strokeColor=#2e7d32;fontSize=11;" value="&lt;b&gt;Cloud-Native Developer&lt;/b&gt;&lt;br&gt;&lt;i&gt;Container / PaaS consumer&lt;/i&gt;&lt;hr size=&#39;1&#39;&gt;• Builds microservices&lt;br&gt;• CI/CD fluent, GitOps preferred&lt;br&gt;• High cloud maturity&lt;br&gt;• Self-service oriented&lt;br&gt;&lt;b&gt;Wants:&lt;/b&gt; K8s namespaces, PaaS APIs" vertex="1">
+          <mxGeometry height="125" width="290" x="15" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="personas_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;fillColor=#fff3e0;strokeColor=#e65100;fontSize=11;" value="&lt;b&gt;Data &amp; Analytics Team&lt;/b&gt;&lt;br&gt;&lt;i&gt;PaaS / managed service consumer&lt;/i&gt;&lt;hr size=&#39;1&#39;&gt;• Data pipelines, ML workloads&lt;br&gt;• Need managed DBs, warehouses&lt;br&gt;• Medium cloud maturity&lt;br&gt;• Cost-sensitive at scale&lt;br&gt;&lt;b&gt;Wants:&lt;/b&gt; Self-service data services" vertex="1">
+          <mxGeometry height="125" width="290" x="15" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="personas_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;fillColor=#fce4ec;strokeColor=#c62828;fontSize=11;" value="&lt;b&gt;DevOps / SRE Team&lt;/b&gt;&lt;br&gt;&lt;i&gt;Immutable short-lived IaaS consumer&lt;/i&gt;&lt;hr size=&#39;1&#39;&gt;• Ephemeral compute (build agents, test)&lt;br&gt;• Auto-scaling, spot/preemptible&lt;br&gt;• High automation maturity&lt;br&gt;• Infrastructure-as-code native&lt;br&gt;&lt;b&gt;Wants:&lt;/b&gt; API-driven ephemeral infra" vertex="1">
+          <mxGeometry height="125" width="290" x="15" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" parent="personas_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;fillColor=#f3e5f5;strokeColor=#6a1b9a;fontSize=11;" value="&lt;b&gt;Business / Citizen Developer&lt;/b&gt;&lt;br&gt;&lt;i&gt;Portal &amp; low-code consumer&lt;/i&gt;&lt;hr size=&#39;1&#39;&gt;• Non-technical stakeholders&lt;br&gt;• Needs visibility, cost reporting&lt;br&gt;• Low cloud maturity&lt;br&gt;• Consumes via portal / catalogue&lt;br&gt;&lt;b&gt;Wants:&lt;/b&gt; Click-to-deploy, dashboards" vertex="1">
+          <mxGeometry height="125" width="290" x="15" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="platform_container" parent="1" style="swimlane;startSize=30;fillColor=#0d47a1;fontColor=#ffffff;fontSize=14;fontStyle=1;swimlaneLine=1;strokeColor=#0d47a1;rounded=1;arcSize=8;" value="Platform Product Model — Assisted Services" vertex="1">
+          <mxGeometry height="720" width="620" x="370" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="portal_label" parent="platform_container" style="text;html=1;fontSize=12;fontStyle=5;align=center;fillColor=none;strokeColor=none;fontColor=#0d47a1;" value="Developer Portal &amp; Experience Layer" vertex="1">
+          <mxGeometry height="20" width="600" x="10" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="portal1" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=10;verticalAlign=middle;" value="&lt;b&gt;Service Catalogue&lt;/b&gt;&lt;br&gt;Searchable menu of&lt;br&gt;all platform products" vertex="1">
+          <mxGeometry height="60" width="140" x="15" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="portal2" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=10;verticalAlign=middle;" value="&lt;b&gt;Self-Service Portal&lt;/b&gt;&lt;br&gt;Request, provision,&lt;br&gt;manage workloads" vertex="1">
+          <mxGeometry height="60" width="140" x="165" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="portal3" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=10;verticalAlign=middle;" value="&lt;b&gt;Docs &amp; Golden Paths&lt;/b&gt;&lt;br&gt;Templates, guides,&lt;br&gt;reference architectures" vertex="1">
+          <mxGeometry height="60" width="140" x="315" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="portal4" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontSize=10;verticalAlign=middle;" value="&lt;b&gt;Cost &amp; Usage&lt;br&gt;Dashboards&lt;/b&gt;&lt;br&gt;Showback / chargeback" vertex="1">
+          <mxGeometry height="60" width="140" x="465" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="products_label" parent="platform_container" style="text;html=1;fontSize=12;fontStyle=5;align=center;fillColor=none;strokeColor=none;fontColor=#0d47a1;" value="Platform Products (Assisted Services)" vertex="1">
+          <mxGeometry height="20" width="600" x="10" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="prod1" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fillColor=#e3f2fd;strokeColor=#1565c0;fontSize=10;" value="&lt;b&gt;Stateful IaaS&lt;/b&gt;&lt;hr size=&#39;1&#39;&gt;Managed VMs&lt;br&gt;Persistent storage&lt;br&gt;Patching &amp; backup&lt;br&gt;OS lifecycle mgmt&lt;br&gt;DR / HA config" vertex="1">
+          <mxGeometry height="120" width="112" x="15" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="prod2" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fillColor=#e3f2fd;strokeColor=#1565c0;fontSize=10;" value="&lt;b&gt;Immutable IaaS&lt;/b&gt;&lt;hr size=&#39;1&#39;&gt;Ephemeral compute&lt;br&gt;AMI / image pipeline&lt;br&gt;Auto-scaling groups&lt;br&gt;Spot / preemptible&lt;br&gt;Build agent pools" vertex="1">
+          <mxGeometry height="120" width="112" x="137" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="prod3" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fillColor=#e3f2fd;strokeColor=#1565c0;fontSize=10;" value="&lt;b&gt;Container Platform&lt;/b&gt;&lt;hr size=&#39;1&#39;&gt;Managed K8s&lt;br&gt;Namespace-as-a-service&lt;br&gt;Service mesh&lt;br&gt;Registry &amp; scanning&lt;br&gt;GitOps delivery" vertex="1">
+          <mxGeometry height="120" width="112" x="259" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="prod4" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fillColor=#e3f2fd;strokeColor=#1565c0;fontSize=10;" value="&lt;b&gt;PaaS Services&lt;/b&gt;&lt;hr size=&#39;1&#39;&gt;Managed databases&lt;br&gt;Serverless compute&lt;br&gt;Messaging / queues&lt;br&gt;Caching layers&lt;br&gt;API gateways" vertex="1">
+          <mxGeometry height="120" width="112" x="381" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="prod5" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fillColor=#e3f2fd;strokeColor=#1565c0;fontSize=10;" value="&lt;b&gt;Developer Portal&lt;/b&gt;&lt;hr size=&#39;1&#39;&gt;Backstage / custom&lt;br&gt;API documentation&lt;br&gt;Scaffolding / CLI&lt;br&gt;Plugin ecosystem&lt;br&gt;Tech radar" vertex="1">
+          <mxGeometry height="120" width="102" x="503" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="capabilities_label" parent="platform_container" style="text;html=1;fontSize=12;fontStyle=5;align=center;fillColor=none;strokeColor=none;fontColor=#0d47a1;" value="Shared Platform Capabilities" vertex="1">
+          <mxGeometry height="20" width="600" x="10" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="cap1" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0277bd;fontSize=10;verticalAlign=middle;" value="&lt;b&gt;IaC &amp; Automation&lt;/b&gt;&lt;br&gt;Terraform modules&lt;br&gt;Crossplane, Pulumi" vertex="1">
+          <mxGeometry height="55" width="140" x="15" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="cap2" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0277bd;fontSize=10;verticalAlign=middle;" value="&lt;b&gt;CI/CD Pipelines&lt;/b&gt;&lt;br&gt;Shared runners, templates&lt;br&gt;Compliance gates" vertex="1">
+          <mxGeometry height="55" width="140" x="165" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="cap3" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0277bd;fontSize=10;verticalAlign=middle;" value="&lt;b&gt;Observability&lt;/b&gt;&lt;br&gt;Logging, metrics, tracing&lt;br&gt;Alerting &amp; dashboards" vertex="1">
+          <mxGeometry height="55" width="140" x="315" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="cap4" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0277bd;fontSize=10;verticalAlign=middle;" value="&lt;b&gt;Security &amp; Compliance&lt;/b&gt;&lt;br&gt;Policy-as-code, RBAC&lt;br&gt;Secrets, scanning" vertex="1">
+          <mxGeometry height="55" width="140" x="465" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="cap5" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0277bd;fontSize=10;verticalAlign=middle;" value="&lt;b&gt;FinOps&lt;/b&gt;&lt;br&gt;Tagging, budgets,&lt;br&gt;optimisation" vertex="1">
+          <mxGeometry height="55" width="140" x="15" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="cap6" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0277bd;fontSize=10;verticalAlign=middle;" value="&lt;b&gt;Identity &amp; Access&lt;/b&gt;&lt;br&gt;SSO, federation,&lt;br&gt;workload identity" vertex="1">
+          <mxGeometry height="55" width="140" x="165" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="cap7" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0277bd;fontSize=10;verticalAlign=middle;" value="&lt;b&gt;Service Management&lt;/b&gt;&lt;br&gt;Incident, change,&lt;br&gt;request workflows" vertex="1">
+          <mxGeometry height="55" width="140" x="315" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="cap8" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0277bd;fontSize=10;verticalAlign=middle;" value="&lt;b&gt;Governance &amp; Guardrails&lt;/b&gt;&lt;br&gt;Landing zones, SCPs,&lt;br&gt;tagging standards" vertex="1">
+          <mxGeometry height="55" width="140" x="465" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="opmodel_label" parent="platform_container" style="text;html=1;fontSize=12;fontStyle=5;align=center;fillColor=none;strokeColor=none;fontColor=#0d47a1;" value="Operating Model — Product-Centric Squads" vertex="1">
+          <mxGeometry height="20" width="600" x="10" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="squad1" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=10;" value="&lt;b&gt;Stateful IaaS Squad&lt;/b&gt;&lt;hr size=&#39;1&#39;&gt;Product Owner&lt;br&gt;Platform Engineers (Win/Lin)&lt;br&gt;SRE&lt;br&gt;Automation Engineer" vertex="1">
+          <mxGeometry height="100" width="115" x="15" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="squad2" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=10;" value="&lt;b&gt;Ephemeral IaaS Squad&lt;/b&gt;&lt;hr size=&#39;1&#39;&gt;Product Owner&lt;br&gt;Platform Engineers&lt;br&gt;Image Pipeline Dev&lt;br&gt;SRE" vertex="1">
+          <mxGeometry height="100" width="115" x="140" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="squad3" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=10;" value="&lt;b&gt;Container Squad&lt;/b&gt;&lt;hr size=&#39;1&#39;&gt;Product Owner&lt;br&gt;K8s Platform Engineers&lt;br&gt;Service Mesh Eng&lt;br&gt;SRE" vertex="1">
+          <mxGeometry height="100" width="115" x="265" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="squad4" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=10;" value="&lt;b&gt;PaaS / Data Squad&lt;/b&gt;&lt;hr size=&#39;1&#39;&gt;Product Owner&lt;br&gt;Cloud Engineers&lt;br&gt;Data Platform Eng&lt;br&gt;SRE" vertex="1">
+          <mxGeometry height="100" width="115" x="390" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="squad5" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=10;" value="&lt;b&gt;DevEx / Portal Squad&lt;/b&gt;&lt;hr size=&#39;1&#39;&gt;Product Owner&lt;br&gt;Full-Stack Devs&lt;br&gt;UX Designer&lt;br&gt;Tech Writer" vertex="1">
+          <mxGeometry height="100" width="90" x="515" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="crosscut_label" parent="platform_container" style="text;html=1;fontSize=11;fontStyle=5;align=center;fillColor=none;strokeColor=none;fontColor=#0d47a1;" value="Cross-Cutting Roles" vertex="1">
+          <mxGeometry height="18" width="600" x="10" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="cc1" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontSize=10;fontStyle=0;" value="&lt;b&gt;Head of Cloud Platform&lt;/b&gt; (GM)" vertex="1">
+          <mxGeometry height="30" width="175" x="15" y="613" as="geometry" />
+        </mxCell>
+        <mxCell id="cc2" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontSize=10;fontStyle=0;" value="&lt;b&gt;Platform Architect&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="200" y="613" as="geometry" />
+        </mxCell>
+        <mxCell id="cc3" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontSize=10;fontStyle=0;" value="&lt;b&gt;FinOps Lead&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="100" x="340" y="613" as="geometry" />
+        </mxCell>
+        <mxCell id="cc4" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontSize=10;fontStyle=0;" value="&lt;b&gt;Security Champion&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="450" y="613" as="geometry" />
+        </mxCell>
+        <mxCell id="engage_label" parent="platform_container" style="text;html=1;fontSize=11;fontStyle=5;align=center;fillColor=none;strokeColor=none;fontColor=#0d47a1;" value="Engagement &amp; Support Model" vertex="1">
+          <mxGeometry height="18" width="600" x="10" y="653" as="geometry" />
+        </mxCell>
+        <mxCell id="eng1" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontSize=10;" value="&lt;b&gt;Tier 0&lt;/b&gt; Self-Service&lt;br&gt;Portal + Docs" vertex="1">
+          <mxGeometry height="35" width="140" x="15" y="676" as="geometry" />
+        </mxCell>
+        <mxCell id="eng2" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=10;" value="&lt;b&gt;Tier 1&lt;/b&gt; Assisted&lt;br&gt;Squad handles requests" vertex="1">
+          <mxGeometry height="35" width="140" x="165" y="676" as="geometry" />
+        </mxCell>
+        <mxCell id="eng3" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontSize=10;" value="&lt;b&gt;Tier 2&lt;/b&gt; Consultative&lt;br&gt;Architecture review" vertex="1">
+          <mxGeometry height="35" width="140" x="315" y="676" as="geometry" />
+        </mxCell>
+        <mxCell id="eng4" parent="platform_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontSize=10;" value="&lt;b&gt;Tier 3&lt;/b&gt; Embedded&lt;br&gt;Eng in customer squad" vertex="1">
+          <mxGeometry height="35" width="140" x="465" y="676" as="geometry" />
+        </mxCell>
+        <mxCell id="foundations_container" parent="1" style="swimlane;startSize=30;fillColor=#37474f;fontColor=#ffffff;fontSize=14;fontStyle=1;swimlaneLine=1;strokeColor=#37474f;rounded=1;arcSize=8;" value="Foundations Layer (Existing)" vertex="1">
+          <mxGeometry height="720" width="360" x="1020" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="found_label1" parent="foundations_container" style="text;html=1;fontSize=12;fontStyle=5;align=center;fillColor=none;strokeColor=none;fontColor=#546e7a;" value="Core Platform Teams" vertex="1">
+          <mxGeometry height="20" width="340" x="10" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" parent="foundations_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fillColor=#eceff1;strokeColor=#546e7a;fontSize=10;" value="&lt;b&gt;Network Foundations&lt;/b&gt;&lt;br&gt;Transit Gateway, VPC design,&lt;br&gt;DNS, firewall, hybrid connectivity,&lt;br&gt;Direct Connect / ExpressRoute" vertex="1">
+          <mxGeometry height="70" width="330" x="15" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" parent="foundations_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fillColor=#eceff1;strokeColor=#546e7a;fontSize=10;" value="&lt;b&gt;Identity Foundations&lt;/b&gt;&lt;br&gt;AD / Entra ID, SSO federation,&lt;br&gt;PAM, service accounts, MFA" vertex="1">
+          <mxGeometry height="60" width="330" x="15" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" parent="foundations_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fillColor=#eceff1;strokeColor=#546e7a;fontSize=10;" value="&lt;b&gt;Landing Zone / Account Factory&lt;/b&gt;&lt;br&gt;AWS Control Tower / Azure landing zones,&lt;br&gt;SCPs, guardrails, OU structure" vertex="1">
+          <mxGeometry height="60" width="330" x="15" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" parent="foundations_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fillColor=#eceff1;strokeColor=#546e7a;fontSize=10;" value="&lt;b&gt;Security Foundations&lt;/b&gt;&lt;br&gt;GuardDuty / Defender, SIEM integration,&lt;br&gt;config rules, compliance baselines" vertex="1">
+          <mxGeometry height="60" width="330" x="15" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" parent="foundations_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fillColor=#eceff1;strokeColor=#546e7a;fontSize=10;" value="&lt;b&gt;Shared Services&lt;/b&gt;&lt;br&gt;Logging aggregation, monitoring baseline,&lt;br&gt;certificate management, shared tooling" vertex="1">
+          <mxGeometry height="60" width="330" x="15" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="legacy_label" parent="foundations_container" style="text;html=1;fontSize=12;fontStyle=5;align=center;fillColor=none;strokeColor=none;fontColor=#546e7a;" value="On-Premises Legacy (Transitioning)" vertex="1">
+          <mxGeometry height="20" width="340" x="10" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" parent="foundations_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#78909c;fontSize=10;fontStyle=2;" value="Windows Team" vertex="1">
+          <mxGeometry height="35" width="105" x="15" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" parent="foundations_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#78909c;fontSize=10;fontStyle=2;" value="Linux Team" vertex="1">
+          <mxGeometry height="35" width="105" x="128" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" parent="foundations_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#78909c;fontSize=10;fontStyle=2;" value="Storage Team" vertex="1">
+          <mxGeometry height="35" width="105" x="240" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" parent="foundations_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#78909c;fontSize=10;fontStyle=2;" value="Network Team" vertex="1">
+          <mxGeometry height="35" width="105" x="15" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="l5" parent="foundations_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#78909c;fontSize=10;fontStyle=2;" value="Database Team" vertex="1">
+          <mxGeometry height="35" width="105" x="128" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="l6" parent="foundations_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#78909c;fontSize=10;fontStyle=2;" value="Compute Team" vertex="1">
+          <mxGeometry height="35" width="105" x="240" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="transition_arrow" edge="1" parent="foundations_container" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#ff8f00;strokeColor=#e65100;fontSize=10;fontStyle=2;width=14;endSize=6;startSize=6;" value="Skills migrate into product squads">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="545" as="sourcePoint" />
+            <mxPoint x="175" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="transition_note" parent="foundations_container" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#fff3e0;strokeColor=#ff8f00;fontSize=10;dashed=1;" value="&lt;i&gt;On-prem specialists retrain and embed&lt;br&gt;into cloud platform product squads,&lt;br&gt;bringing domain expertise (Windows,&lt;br&gt;Linux, storage, DB) into cross-functional&lt;br&gt;teams rather than siloed towers.&lt;/i&gt;" vertex="1">
+          <mxGeometry height="80" width="330" x="15" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_p1" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#3949ab;strokeWidth=1.5;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="prod1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_p2" edge="1" parent="1" source="p2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#2e7d32;strokeWidth=1.5;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="prod3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_p3" edge="1" parent="1" source="p3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#e65100;strokeWidth=1.5;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="prod4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_p4" edge="1" parent="1" source="p4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#c62828;strokeWidth=1.5;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="prod2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_p5" edge="1" parent="1" source="p5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6a1b9a;strokeWidth=1.5;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="prod5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_plat_f1" edge="1" parent="1" source="cap1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#37474f;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=9;fontStyle=2;" target="f3" value="consumes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_plat_f2" edge="1" parent="1" source="cap4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#37474f;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=9;fontStyle=2;" target="f4" value="consumes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
