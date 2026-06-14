@@ -36,6 +36,7 @@ The user may want the whole assessment or just one piece. Match the request:
 | **Recommend** a target model | Run intake (Step 1) → score candidates (Steps 2–4) → state a recommendation with rationale. |
 | **Create the full assessment + roadmap** | Run the whole workflow and assemble the document from `assets/assessment-template.md`. |
 | **Plan the transition** (model already chosen) | Jump to Step 5 using `references/transition-roadmap.md`. |
+| **Size / benchmark the team** ("are we resourced right vs. peers?", "how many FTE?") | Use `references/workforce-sizing.md` (Step 5b); can be run standalone or inside a full assessment. |
 
 When in doubt, ask one or two sharp scoping questions rather than guessing — an operating-model
 recommendation built on wrong assumptions about team size, regulation, or cloud maturity is worse
@@ -113,6 +114,23 @@ capabilities/hires/training, guardrails to stand up, quick wins to build momentu
 to the next phase. Surface the people risks explicitly — operating-model transitions fail on org
 change far more often than on technology.
 
+### Step 5b — Size and benchmark the team (FTE)
+
+Operating-model questions almost always carry a resourcing question: *how many people, doing what,
+and is that normal for our workload vs. peers?* When the user asks this — or whenever the
+recommendation implies a materially different team — use `references/workforce-sizing.md`.
+
+The method in brief: **triangulate** a top-down peer ratio (e.g. developers-supported or
+spend-managed per platform FTE) against a **bottom-up** functional/squad model of required FTE, then
+**normalize** for automation and operating-model maturity before comparing to peers. Apply the hard
+floors (24/7 on-call needs ~6–8 per rota; toil capped ~50%). Read any gap as **automation vs.
+staffing before hire vs. cut** — a centralized ticket-driven model needs more FTE per unit than a
+platform model, so resourcing and model choice are linked.
+
+This can run standalone (a benchmarking ask) or feed the assessment: the required-vs-actual FTE and
+the automation/hiring split flow into §6 (team structure) and the capabilities workstream of the
+transition roadmap (Step 5).
+
 ### Step 6 — Assemble the document
 
 Build the deliverable from `assets/assessment-template.md`. It is deliberately **layered**: a tight
@@ -161,6 +179,9 @@ credibility-killer.
   and the scoring rubric. Read this for Step 3.
 - `references/transition-roadmap.md` — phasing patterns, RACI-evolution guidance, common
   sequencing, quick wins, and the failure modes of operating-model change. Read this for Step 5.
+- `references/workforce-sizing.md` — FTE benchmarking and right-sizing: top-down peer ratios,
+  bottom-up workload modeling, normalization factors, hard floors (on-call/toil), and benchmark
+  sources. Read this for Step 5b or any "are we resourced right vs. peers?" question.
 - `references/platform-as-a-product.md` — a fully worked example of the Platform Engineering model,
   with reusable techniques (persona-driven design, assisted-services maturity gradient, product
   taxonomy, product-centric squads, engagement tiers, and the tower→squad transition). Read this

@@ -5,3 +5,7 @@
 Thumbs.db
 .DS_Store
 *.swp
+
+# Lives in its own repo: github.com/chrishorne74/enterprise-architecture-team
+enterprise-architecture-team/
+.github/prompts/enterprise-architecture-team.prompt.md

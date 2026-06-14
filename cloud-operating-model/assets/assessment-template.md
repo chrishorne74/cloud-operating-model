@@ -135,6 +135,26 @@ weighted differently, B and C tie."]
 - **Org-change actions:** [role changes, incentives, comms, addressing team identity/resistance]
 - **Executive sponsor:** [named role accountable for removing blockers]
 
+### 8a. Workforce sizing & peer benchmark
+*(Are we resourced right for this workload vs. peers? Triangulate top-down ratio + bottom-up model,
+normalized for maturity. See references/workforce-sizing.md.)*
+
+- **Normalized denominator used:** [e.g. developers-supported per platform FTE; cloud spend per FTE]
+- **Peer cohort definition:** [industry, size, cloud maturity, regulatory burden — not revenue alone]
+
+| Function | Current FTE | Required FTE (bottom-up) | Gap | Driver: automation or staffing? |
+| --- | :-: | :-: | :-: | --- |
+| Platform / landing zone | _ | _ | _ | [...] |
+| Security & GRC | _ | _ | _ | [...] |
+| FinOps | _ | _ | _ | [...] |
+| Service management / on-call | _ | _ | _ | [...] |
+| Enablement | _ | _ | _ | [...] |
+| **Total** | **_** | **_** | **_** | |
+
+- **Normalized peer ratio vs. cohort:** [our ratio vs. peer range — and whether the gap survives normalization]
+- **Hard-floor checks:** [24/7 on-call rota ≥6–8? toil ≤~50%? bus-factor ≥2 on critical capabilities?]
+- **Recommendation:** [name automation actions *and* any hiring — gap is usually model/automation maturity, not headcount. Feed into the roadmap capabilities workstream in §7.]
+
 ---
 
 ## 9. Risks & Mitigations

@@ -21,6 +21,7 @@ is enforced without becoming a bottleneck.* Keep that human-and-process lens thr
 > - `cloud-operating-model/references/operating-models.md` — archetype catalog + Azure/AWS/Gartner cross-walk
 > - `cloud-operating-model/references/evaluation-criteria.md` — weighted criteria + scoring rubric
 > - `cloud-operating-model/references/transition-roadmap.md` — phasing, RACI evolution, failure modes
+> - `cloud-operating-model/references/workforce-sizing.md` — FTE benchmarking & right-sizing vs. peers
 > - `cloud-operating-model/references/platform-as-a-product.md` — worked Platform Engineering example + techniques
 > - `cloud-operating-model/assets/assessment-template.md` — the layered output document skeleton
 > - `cloud-operating-model/assets/opmodel-diagram-template.drawio` — adaptable diagram skeleton
@@ -35,6 +36,7 @@ Match the request rather than always producing the full document:
 - **Recommend a target** → run intake (step 1) → score candidates (steps 2–4) → state a clear recommendation.
 - **Full assessment + roadmap** → run the whole workflow and assemble from `assessment-template.md`.
 - **Plan the transition** (model already chosen) → jump to step 5 using `transition-roadmap.md`.
+- **Size / benchmark the team** ("are we resourced right vs. peers?", "how many FTE?") → use `workforce-sizing.md` (step 5b); standalone or inside a full assessment.
 
 When in doubt, ask one or two sharp scoping questions rather than guessing — a recommendation built
 on wrong assumptions about team size, regulation, or cloud maturity is worse than none.
@@ -65,6 +67,13 @@ on wrong assumptions about team size, regulation, or cloud maturity is worse tha
    target as *phases* (never big-bang). For each: objective, activities, **RACI / ownership shifts**,
    capabilities/hires/training, guardrails, quick wins, exit criteria. Surface people-risks
    explicitly — operating-model transitions fail on org change far more than on technology.
+
+5b. **Size & benchmark the team (FTE).** When asked "are we resourced right vs. peers?" — or when the
+   recommendation implies a different team — use `workforce-sizing.md`. Triangulate a top-down peer
+   ratio (developers-supported or spend-managed per platform FTE) against a bottom-up functional/squad
+   model, normalize for automation and operating-model maturity, apply hard floors (24/7 on-call ~6–8
+   per rota, toil ≤~50%), and read any gap as automation-vs-staffing before hire-vs-cut. Can run
+   standalone or feed §6 and the roadmap's capabilities workstream.
 
 6. **Assemble the document** from `assessment-template.md` — layered exec summary up front, technical
    depth below. One artifact, two reading depths.
